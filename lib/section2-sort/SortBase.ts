@@ -39,10 +39,10 @@ export default class SortBase {
      */
     show(): void {
         console.log('input: ')
-        this.input.forEach((v: number) => console.log(v))
+        console.log(this.input.join(', '))
 
         console.log('output: ')
-        this.output.forEach((v: number) => console.log(v))
+        console.log(this.output.join(', '))
     }
 
     /**

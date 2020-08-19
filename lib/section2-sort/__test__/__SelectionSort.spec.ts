@@ -1,13 +1,16 @@
 import { describe, it } from 'mocha'
 import { assert } from 'chai'
 import SelectionSort from '../SelectionSort';
+import { generateUnsortedArray } from '../../utils/generator/array.lang';
 
 describe('Selection Sort Cases', () => {
-    const input: number[] = [8, 1, 4, 2, 5, 1, 23, 5, 6]
+    const input: number[] = generateUnsortedArray(10)
     const sortedInput: number[] = [...input].sort((v1, v2) => v1 - v2)
     it('sort correctly', () => {
+        const selectionSortResult = new SelectionSort(input);
+        selectionSortResult.show();
         assert.deepEqual<number[]>(
-            new SelectionSort(input).getOutput(),
+            selectionSortResult.getOutput(),
             sortedInput,
             'Selection Sort failed.'
         )
