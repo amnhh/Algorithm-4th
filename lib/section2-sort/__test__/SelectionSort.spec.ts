@@ -4,15 +4,13 @@ import SelectionSort from '../SelectionSort';
 import { generateUnsortedArray } from '../../utils/generator/array.lang';
 
 describe('Selection Sort Cases', () => {
-    console.log('Selection Sort: ')
-
     const input1: number[] = generateUnsortedArray(10)
     const sortedInput1: number[] = [...input1].sort((v1, v2) => v1 - v2)
 
     const input2: number[] = generateUnsortedArray(10)
     const sortedInput2: number[] = [...input2].sort((v1, v2) => v1 - v2)
 
-    it('sort correctly', () => {
+    it('selection sort correctly', () => {
         const selectionSortResult1 = new SelectionSort(input1);
         selectionSortResult1.show();
         assert.deepEqual<number[]>(
