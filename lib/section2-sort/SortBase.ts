@@ -4,7 +4,7 @@ export default class SortBase {
 
     constructor (initList: number[]) {
         this.input = initList
-        this.output = this.sort()
+        this.output = this.sort([...this.input])
     }
 
     getOutput() {
@@ -14,7 +14,7 @@ export default class SortBase {
     /**
      * 算法主方法，子类实现
      */
-    sort(): number[] {
+    sort(list: number[]): number[] {
         return []
     }
 

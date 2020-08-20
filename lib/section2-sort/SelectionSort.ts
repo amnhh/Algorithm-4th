@@ -4,8 +4,7 @@ class SelectionSort extends SortBase {
     /**
      * @override
      */
-    sort(): number[] {
-        const list: number[] = [...this.input]
+    sort(list: number[]): number[] {
         for (let i: number = 0; i < list.length; i ++) {
             let minimal: number = i
             for (let j = i + 1; j < list.length; j ++) {
