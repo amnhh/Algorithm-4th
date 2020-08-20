@@ -4,6 +4,8 @@ import SelectionSort from '../SelectionSort';
 import { generateUnsortedArray } from '../../utils/generator/array.lang';
 
 describe('Selection Sort Cases', () => {
+    console.log('Selection Sort: ')
+
     const input1: number[] = generateUnsortedArray(10)
     const sortedInput1: number[] = [...input1].sort((v1, v2) => v1 - v2)
 
