@@ -1,13 +1,6 @@
-import SortBase from './SortBase'
+import SortBase from '../SortBase'
 
-/**
- * 归并排序主类
- *
- * 归并思想
- */
-
-export default class MergeSort extends SortBase {
-
+export default class MergeSortBase extends SortBase {
     sort (list: number[]): number[] {
         return this._sort(list)
     }
@@ -56,19 +49,7 @@ export default class MergeSort extends SortBase {
 
     }
 
-    /**
-     * 真实的 sort 方法
-     * @param list
-     * @param low
-     * @param high
-     * @private
-     */
-    _sort(list: number[], low: number = 0, high: number = list.length - 1): number[] {
-        if (high <= low) return
-        const mid = low + Math.floor((high - low) / 2)
-        this._sort(list, low, mid)
-        this._sort(list, mid + 1, high)
-        this._merge(list, low, mid, high)
+    _sort(list: number[]): number[] {
         return list
     }
 }

@@ -1,9 +1,9 @@
 import { describe, it } from 'mocha'
 import { assert } from 'chai'
-import MergeSort from '../MergeSort'
+import MergeSortBottomToTop from '../MergeSort/MergeSortBottomToTop';
 import { generateUnsortedArray } from '../../utils/generator/array.lang';
 
-describe('', () => {
+describe('Merge sort bottom to top', () => {
     const input1: number[] = generateUnsortedArray(10)
     const sortedInput1: number[] = [...input1].sort((v1, v2) => v1 - v2)
 
@@ -11,7 +11,7 @@ describe('', () => {
     const sortedInput2: number[] = [...input2].sort((v1, v2) => v1 - v2)
 
     it('Merge sort correctly', () => {
-        const insertionSortResult1 = new MergeSort(input1);
+        const insertionSortResult1 = new MergeSortBottomToTop(input1);
         insertionSortResult1.show();
         assert.deepEqual<number[]>(
             insertionSortResult1.getOutput(),
@@ -19,7 +19,7 @@ describe('', () => {
             'Merge Sort failed.'
         )
 
-        const insertionSortResult2 = new MergeSort(input2);
+        const insertionSortResult2 = new MergeSortBottomToTop(input2);
         insertionSortResult2.show();
         assert.deepEqual<number[]>(
             insertionSortResult2.getOutput(),
